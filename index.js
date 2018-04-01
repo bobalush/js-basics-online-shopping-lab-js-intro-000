@@ -50,6 +50,7 @@ function total() {
   return total;
 }
 
+/*
 function removeFromCart(item) {
   // write your code here
   var i = 0;
@@ -61,6 +62,17 @@ function removeFromCart(item) {
     i += 1;
   }
   return "That item is not in your cart.";
+}
+*/
+
+function removeFromCart(item) {
+    if(getCart().includes(item)) {
+    var index = getCart().indexOf(item);
+    getCart().splice(index,1);
+    return getCart();
+  } else {
+    return "That item is not in your cart.";
+  }
 }
 
 function placeOrder(cardNumber) {
