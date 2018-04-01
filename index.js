@@ -68,6 +68,7 @@ function removeFromCart(item) {
 function removeFromCart(item) {
     if(getCart().includes(item)) {
     var index = getCart().indexOf(item);
+    console.log(index);
     getCart().splice(index,1);
     return getCart();
   } else {
